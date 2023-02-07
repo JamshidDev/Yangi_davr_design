@@ -65,9 +65,6 @@ function controlLoading() {
     background-image: url("@/assets/images/login_bg.jpg");
     background-position: left;
     background-size: cover;
-
-
-
     position: relative !important;
 
     .form_conatiner {
@@ -84,7 +81,6 @@ function controlLoading() {
             display: inline-block;
             font-size: 30px;
             color: #ffffff;
-            margin-bottom: 50px;
         }
 
         .phone_number {
@@ -196,8 +192,7 @@ function controlLoading() {
         width: 70px;
         object-fit: contain;
         position: absolute;
-        top: 89px;
-        left: 99px;
+
     }
 
 
@@ -212,6 +207,10 @@ function controlLoading() {
         .form_conatiner{
             width: 790px;
             padding: 350px 100px 0px 100px;
+            
+        &>.login_title {
+            margin-bottom:50px;
+        }
         }
         
     }
@@ -219,11 +218,52 @@ function controlLoading() {
 } 
  
 /* Landscape tablets and medium desktops */ 
-@media (min-width: 992px) and (max-width: 1536.99px) { 
+@media (min-width: 1301px) and (max-width: 1536.99px) { 
     .login_page {
         .form_conatiner{
             width: 40%;
-            padding: 250px 100px 0px 100px;
+            padding: 250px 60px 0px 60px;
+                  
+        &>.login_title {
+            margin-bottom:50px;
+        }
+            
+    
+
+        }
+    }
+    .logo_box {
+        position: absolute;
+        bottom: 30px !important;
+        left: 99px;
+        .title {
+            font-size: 30px !important;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 16px !important;
+            font-weight: 500;
+        }
+    }
+
+    .login_logo_picture {
+        width: 60px !important;
+        object-fit: contain;
+        position: absolute;
+        top: 89px;
+        left: 99px;
+    }
+} 
+@media (min-width: 991.1px) and (max-width: 1300.99px) { 
+    .login_page {
+        .form_conatiner{
+            width: 40%;
+            padding: 200px 30px 0px 30px;
+                  
+        &>.login_title {
+            margin-bottom:50px;
+        }
         }
     }
     .logo_box {
@@ -252,16 +292,153 @@ function controlLoading() {
  
 /* Portrait tablets and small desktops */ 
 @media (min-width: 768px) and (max-width: 991px) { 
- 
+    .login_page {
+        .form_conatiner{
+            width: 100%;
+            padding: 200px 20% 0px 20%;
+                  
+        &>.login_title {
+            margin-bottom:50px;
+        }
+        }
+    }
+    .logo_box {
+        position: absolute;
+        bottom: 30px !important;
+        left: 99px;
+        z-index: 10;
+        .title {
+            font-size: 20px !important;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 14px !important;
+            font-weight: 500;
+        }
+    }
+
+    .login_logo_picture {
+        width: 60px !important;
+        object-fit: contain;
+        position: absolute;
+        top: 89px;
+        left: 99px;
+        z-index: 10;
+    }
 } 
  
 /* Landscape phones and portrait tablets */ 
-@media (max-width: 767px) { 
- 
+@media (min-width: 480.99px) and (max-width: 767px) { 
+    .login_page {
+        .form_conatiner{
+            width: 100%;
+            padding: 100px 20% 0px 20%;
+                  
+        &>.login_title {
+            margin-bottom:50px;
+        }
+        }
+    }
+    .logo_box {
+        position: absolute;
+        bottom: 40px !important;
+        left: 40px !important;
+        z-index: 10;
+        .title {
+            font-size: 20px !important;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 14px !important;
+            font-weight: 500;
+        }
+    }
+
+    .login_logo_picture {
+        width: 50px !important;
+        object-fit: contain;
+        position: absolute;
+        top: 30px !important;
+        left: 40px !important;
+        z-index: 10;
+    }
 } 
  
 /* Portrait phones and smaller */ 
 @media (max-width: 480px) { 
+
+    .login_page {
+        .form_conatiner{
+            width: 100%;
+            padding: 160px 20px 0px 20px;
+            &>.login_title {
+            font-size:20px !important;
+            margin-bottom:30px !important;
+        }
+
+            .btn-box {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+           
+
+
+            .login_btn {
+                width: 140px;
+                height: 40px;
+                background-color: #F9A226;
+                color: #ffffff;
+                padding: 10px 20px !important;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+
+            .register_btn {
+                width: calc(100% - 120px);
+               
+
+               
+            }
+        }
+
+        }
+    }
+    .logo_box {
+        position: absolute;
+        bottom: 40px !important;
+        left: 40px !important;
+        z-index: 10;
+        .title {
+            font-size: 20px !important;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 14px !important;
+            font-weight: 500;
+        }
+    }
+
+    .login_logo_picture {
+        width: 40px !important;
+        object-fit: contain;
+        position: absolute;
+        top: 20px !important;
+        left: 20px !important;
+        z-index: 10;
+    }
+
  
 }
 </style>
