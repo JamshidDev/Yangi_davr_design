@@ -3,7 +3,7 @@
         <img class="login_logo_picture" src="@/assets/images/login_logo.png" alt="Login logo">
 
         <div class="form_conatiner">
-           
+
             <span class="login_title">Tizimga kirish</span>
 
             <div class="input_box">
@@ -15,28 +15,29 @@
                 <input class="fluid_input" type="text" placeholder="Telefon raqam">
                 <Icon class="fluid_icon" icon="ic:baseline-call" width="30" color="#ffffff" />
             </div>
-            
+
             <div class="btn-box">
-                <div class="login_btn" @click="controlLoading"> 
+                <div class="login_btn" @click="controlLoading">
                     <span>Kirish</span>
-                    <Icon class="fluid_icon" :icon="loading?'svg-spinners:bars-rotate-fade' : 'mdi:chevron-right'" width="26"  color="#ffffff" />
+                    <Icon class="fluid_icon" :icon="loading ? 'svg-spinners:bars-rotate-fade' : 'mdi:chevron-right'"
+                        width="26" color="#ffffff" />
                 </div>
                 <div class="register_btn">
-                  <span>  Ro'yxatdan o'tish</span>
+                    <span> Ro'yxatdan o'tish</span>
                 </div>
             </div>
 
-         
+
         </div>
 
         <div class="logo_box">
-                <div class="title">
-                    Yangi davr raqamli ta'lim
-                </div>
-                <div class="subtitle">
-                    platformasiga xush kelibsiz!
-                </div>
+            <div class="title">
+                Yangi davr raqamli ta'lim
             </div>
+            <div class="subtitle">
+                platformasiga xush kelibsiz!
+            </div>
+        </div>
 
     </div>
 </template>
@@ -47,9 +48,9 @@ import { Icon } from "@iconify/vue"
 const loading = ref(false);
 
 
-function controlLoading(){
+function controlLoading() {
     loading.value = true;
-    setTimeout(()=>{
+    setTimeout(() => {
         loading.value = false;
     }, 3000)
 }
@@ -61,21 +62,22 @@ function controlLoading(){
 .login_page {
     width: 100% !important;
     height: 100vh;
-    background: url("@/assets/images/login_bg.jpg");
+    background-image: url("@/assets/images/login_bg.jpg");
+    background-position: left;
     background-size: cover;
-    background-position: bottom left;
-    
+
+
+
     position: relative !important;
 
     .form_conatiner {
-        width: 630px;
         min-height: 100%;
         position: absolute;
         top: 0px;
         right: 0px;
-        background-color: #000000b3;
+        background-color: #000000cf;
         backdrop-filter: blur(10px);
-        padding: 250px 70px 0px 70px;
+        padding: 350px 100px 0px 100px;
 
         &>.login_title {
             width: 100%;
@@ -84,51 +86,61 @@ function controlLoading(){
             color: #ffffff;
             margin-bottom: 50px;
         }
-        .phone_number{
+
+        .phone_number {
             margin-top: 30px;
         }
 
         .input_box {
             display: flex;
             align-items: center;
+            position: relative;
             width: 100%;
             height: 40px;
-            border-bottom: 1px solid #F2F2F2;
+           
 
             .fluid_icon {
                 width: 26px;
                 font-weight: 500 !important;
-                
+                position: absolute;
+                right: 0px;
+                top: 10px;
+
+
             }
 
             .fluid_input {
                 display: inline-block;
-                width: calc(100% - 32px) !important;
+                width: 100%!important;
                 height: 100% !important;
                 background-color: transparent;
                 border: none;
                 font-size: 20px;
                 color: #F9A226;
+                border-bottom: 1px solid #F2F2F2;
 
             }
 
             .fluid_input:focus {
                 outline: none;
+                border-bottom: 1px solid #F9A226;
             }
 
             .fluid_input::placeholder {
                 color: #ffffff;
                 font-size: 14px;
                 font-weight: 500;
+                font-family: 'Montserrat', sans-serif !important;
             }
         }
 
-        .btn-box{
+        .btn-box {
             margin-top: 30px;
             width: 100%;
             display: flex;
             align-items: center;
-            .login_btn{
+
+            .login_btn {
                 width: 140px;
                 height: 40px;
                 background-color: #F9A226;
@@ -136,15 +148,16 @@ function controlLoading(){
                 padding: 10px 30px;
                 display: flex;
                 align-items: center;
-                
                 gap: 10px;
                 cursor: pointer;
                 transition: all 0.3s ease-out;
-                &:active{
+
+                &:active {
                     transform: scale(0.8);
                 }
             }
-            .register_btn{
+
+            .register_btn {
                 width: calc(100% - 140px);
                 height: 40px;
                 color: #ffffff;
@@ -152,7 +165,8 @@ function controlLoading(){
                 align-items: center;
                 justify-content: center;
                 transition: all 0.2s ease;
-                span:hover{
+
+                span:hover {
                     cursor: pointer;
                     color: #F9A226;
                 }
@@ -161,27 +175,93 @@ function controlLoading(){
 
     }
 
-    .logo_box{
+    .logo_box {
         position: absolute;
         bottom: 50px;
-        left: 80px;
+        left: 99px;
         color: #412A52;
-        .title{
+
+        .title {
             font-size: 38px;
+            font-weight: 500;
         }
-        .subtitle{
+
+        .subtitle {
             font-size: 20px;
+            font-weight: 500;
         }
     }
-    .login_logo_picture{
+
+    .login_logo_picture {
         width: 70px;
         object-fit: contain;
         position: absolute;
-        top: 50px;
-        left: 80px;
+        top: 89px;
+        left: 99px;
     }
 
 
 
+}
+
+
+
+/* Large desktops and laptops */ 
+@media (min-width: 1537px) { 
+    .login_page {
+        .form_conatiner{
+            width: 790px;
+            padding: 350px 100px 0px 100px;
+        }
+        
+    }
+
+} 
+ 
+/* Landscape tablets and medium desktops */ 
+@media (min-width: 992px) and (max-width: 1536.99px) { 
+    .login_page {
+        .form_conatiner{
+            width: 40%;
+            padding: 250px 100px 0px 100px;
+        }
+    }
+    .logo_box {
+        position: absolute;
+        bottom: 30px !important;
+        left: 99px;
+        .title {
+            font-size: 30px !important;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 16px !important;
+            font-weight: 500;
+        }
+    }
+
+    .login_logo_picture {
+        width: 60px !important;
+        object-fit: contain;
+        position: absolute;
+        top: 89px;
+        left: 99px;
+    }
+} 
+ 
+/* Portrait tablets and small desktops */ 
+@media (min-width: 768px) and (max-width: 991px) { 
+ 
+} 
+ 
+/* Landscape phones and portrait tablets */ 
+@media (max-width: 767px) { 
+ 
+} 
+ 
+/* Portrait phones and smaller */ 
+@media (max-width: 480px) { 
+ 
 }
 </style>
