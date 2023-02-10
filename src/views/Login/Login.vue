@@ -214,6 +214,13 @@ function controlLoading() {
         }
         
     }
+    .login_logo_picture {
+        width: 60px !important;
+        object-fit: contain;
+        position: absolute;
+        top: 89px;
+        left: 99px;
+    }
 
 } 
  

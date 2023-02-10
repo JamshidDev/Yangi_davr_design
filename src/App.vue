@@ -14,7 +14,7 @@ window.addEventListener("load", function(event) {
 <template>
   <div class="layout_wrapper">
    <router-view></router-view>
-   <LoadingComponent v-if="loading"></LoadingComponent>
+   <LoadingComponent v-show="loading"></LoadingComponent>
   </div>
 </template>
 

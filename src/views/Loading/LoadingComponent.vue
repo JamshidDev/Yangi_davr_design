@@ -1,8 +1,10 @@
 <template>
+   <div>
     <div class="loading_container">
         <!-- <Icon icon="svg-spinners:bars-rotate-fade" width="90" color="#F9A226" /> -->
         <div class="lds-dual-ring"></div>
     </div>
+   </div>
 </template>
 
 <script setup>
