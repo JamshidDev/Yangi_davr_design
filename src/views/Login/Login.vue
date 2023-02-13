@@ -31,9 +31,12 @@
         </div>
 
         <div class="logo_box">
-            <div class="title">
-                Yangi davr raqamli ta'lim
-            </div>
+            <Transition name="title">
+                <div class="title">
+                    Yangi davr raqamli ta'lim
+                </div>
+            </Transition>
+
             <div class="subtitle">
                 platformasiga xush kelibsiz!
             </div>
@@ -93,7 +96,7 @@ function controlLoading() {
             position: relative;
             width: 100%;
             height: 40px;
-           
+
 
             .fluid_icon {
                 width: 26px;
@@ -107,7 +110,7 @@ function controlLoading() {
 
             .fluid_input {
                 display: inline-block;
-                width: 100%!important;
+                width: 100% !important;
                 height: 100% !important;
                 background-color: transparent;
                 border: none;
@@ -149,7 +152,8 @@ function controlLoading() {
                 transition: all 0.3s ease-out;
 
                 &:active {
-                    transform: scale(0.8);
+                    transform: scale(0.98);
+                    background-color: #a76406e3;
                 }
             }
 
@@ -180,11 +184,15 @@ function controlLoading() {
         .title {
             font-size: 38px;
             font-weight: 500;
+            opacity: 0;
+            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
         }
 
         .subtitle {
             font-size: 20px;
             font-weight: 500;
+            opacity: 0;
+            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
         }
     }
 
@@ -192,6 +200,8 @@ function controlLoading() {
         width: 70px;
         object-fit: contain;
         position: absolute;
+        opacity: 0;
+        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
 
     }
 
@@ -201,19 +211,20 @@ function controlLoading() {
 
 
 
-/* Large desktops and laptops */ 
-@media (min-width: 1537px) { 
+/* Large desktops and laptops */
+@media (min-width: 1537px) {
     .login_page {
-        .form_conatiner{
+        .form_conatiner {
             width: 790px;
             padding: 350px 100px 0px 100px;
-            
-        &>.login_title {
-            margin-bottom:50px;
+
+            &>.login_title {
+                margin-bottom: 50px;
+            }
         }
-        }
-        
+
     }
+
     .login_logo_picture {
         width: 60px !important;
         object-fit: contain;
@@ -222,27 +233,29 @@ function controlLoading() {
         left: 99px;
     }
 
-} 
- 
-/* Landscape tablets and medium desktops */ 
-@media (min-width: 1301px) and (max-width: 1536.99px) { 
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 1301px) and (max-width: 1536.99px) {
     .login_page {
-        .form_conatiner{
+        .form_conatiner {
             width: 40%;
             padding: 250px 60px 0px 60px;
-                  
-        &>.login_title {
-            margin-bottom:50px;
-        }
-            
-    
+
+            &>.login_title {
+                margin-bottom: 50px;
+            }
+
+
 
         }
     }
+
     .logo_box {
         position: absolute;
         bottom: 30px !important;
         left: 99px;
+
         .title {
             font-size: 30px !important;
             font-weight: 500;
@@ -261,22 +274,25 @@ function controlLoading() {
         top: 89px;
         left: 99px;
     }
-} 
-@media (min-width: 991.1px) and (max-width: 1300.99px) { 
+}
+
+@media (min-width: 991.1px) and (max-width: 1300.99px) {
     .login_page {
-        .form_conatiner{
+        .form_conatiner {
             width: 40%;
             padding: 200px 30px 0px 30px;
-                  
-        &>.login_title {
-            margin-bottom:50px;
-        }
+
+            &>.login_title {
+                margin-bottom: 50px;
+            }
         }
     }
+
     .logo_box {
         position: absolute;
         bottom: 30px !important;
         left: 99px;
+
         .title {
             font-size: 30px !important;
             font-weight: 500;
@@ -295,25 +311,27 @@ function controlLoading() {
         top: 89px;
         left: 99px;
     }
-} 
- 
-/* Portrait tablets and small desktops */ 
-@media (min-width: 768px) and (max-width: 991px) { 
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
     .login_page {
-        .form_conatiner{
+        .form_conatiner {
             width: 100%;
             padding: 200px 20% 0px 20%;
-                  
-        &>.login_title {
-            margin-bottom:50px;
-        }
+
+            &>.login_title {
+                margin-bottom: 50px;
+            }
         }
     }
+
     .logo_box {
         position: absolute;
         bottom: 30px !important;
         left: 99px;
         z-index: 10;
+
         .title {
             font-size: 20px !important;
             font-weight: 500;
@@ -333,33 +351,37 @@ function controlLoading() {
         left: 99px;
         z-index: 10;
     }
-} 
- 
-/* Landscape phones and portrait tablets */ 
-@media (min-width: 480.99px) and (max-width: 767px) { 
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 480.99px) and (max-width: 767px) {
     .login_page {
-        .form_conatiner{
+        .form_conatiner {
             width: 100%;
             padding: 100px 20% 0px 20%;
-                  
-        &>.login_title {
-            margin-bottom:50px;
-        }
+
+            &>.login_title {
+                margin-bottom: 50px;
+            }
         }
     }
+
     .logo_box {
         position: absolute;
         bottom: 40px !important;
         left: 40px !important;
         z-index: 10;
+
         .title {
             font-size: 20px !important;
             font-weight: 500;
+            color: #ffffff !important;
         }
 
         .subtitle {
             font-size: 14px !important;
             font-weight: 500;
+            color: #ffffff !important;
         }
     }
 
@@ -371,81 +393,124 @@ function controlLoading() {
         left: 40px !important;
         z-index: 10;
     }
-} 
- 
-/* Portrait phones and smaller */ 
-@media (max-width: 480px) { 
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
 
     .login_page {
-        .form_conatiner{
+        .form_conatiner {
             width: 100%;
             padding: 160px 20px 0px 20px;
+
             &>.login_title {
-            font-size:20px !important;
-            margin-bottom:30px !important;
-        }
+                font-size: 20px !important;
+                margin-bottom: 30px !important;
+            }
 
             .btn-box {
-            margin-top: 30px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-
-           
-
-
-            .login_btn {
-                width: 140px;
-                height: 40px;
-                background-color: #F9A226;
-                color: #ffffff;
-                padding: 10px 20px !important;
+                margin-top: 30px;
+                width: 100%;
                 display: flex;
                 align-items: center;
-                gap: 10px;
-                cursor: pointer;
-                transition: all 0.3s ease-out;
 
-                &:active {
-                    transform: scale(0.8);
+
+
+
+
+
+                .login_btn {
+                    width: 140px;
+                    height: 40px;
+                    background-color: #F9A226;
+                    color: #ffffff;
+                    padding: 10px 20px !important;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease-out;
+
+                    &:active {
+                        transform: scale(0.8);
+                    }
+                }
+
+                .register_btn {
+                    width: calc(100% - 120px);
+
+
+
                 }
             }
 
-            .register_btn {
-                width: calc(100% - 120px);
-               
-
-               
-            }
-        }
-
         }
     }
+
     .logo_box {
         position: absolute;
         bottom: 40px !important;
         left: 40px !important;
         z-index: 10;
-        .title {
+
+       .title {
             font-size: 20px !important;
             font-weight: 500;
+            color: #ffffff !important;
         }
 
         .subtitle {
             font-size: 14px !important;
             font-weight: 500;
+            color: #ffffff !important;
         }
     }
 
     .login_logo_picture {
-        width: 40px !important;
+        width: 60px !important;
         object-fit: contain;
         position: absolute;
-        top: 20px !important;
+        top: 30px !important;
         left: 20px !important;
         z-index: 10;
     }
 
- 
+
+}
+
+// bacground image
+
+// @media screen and (max-width: 995px),
+// screen and (max-height: 700px) {}
+
+@keyframes brand-title{
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes brand-subtitle{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes logo-picture{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 </style>
