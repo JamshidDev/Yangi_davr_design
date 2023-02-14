@@ -4,27 +4,23 @@
 
         <div class="form_conatiner">
 
-            <span class="login_title">Tizimga kirish</span>
+            <span class="support_title">Qo'llab quvvatlash xizmati</span>
+            <span class="support_subtitle">Platforma bo'yicha savol, taklif, muammolar yuzasidan:</span>
 
-            <div class="input_box">
-                <input class="fluid_input" type="text" placeholder="Login">
-                <Icon class="fluid_icon" icon="mdi:account-outline" width="32" color="#ffffff" />
-            </div>
 
-            <div class="input_box phone_number">
-                <input class="fluid_input" type="text" placeholder="Telefon raqam">
-                <Icon class="fluid_icon" icon="ic:baseline-call" width="30" color="#ffffff" />
-            </div>
+           <div class="support-btn-box">
+            <a href="tel:+998907884547" class="btn-container phone-support-btn">
+                <Icon class="fluid_icon" icon="ic:baseline-call" width="26" color="#ffffff" /> <span>Telefon</span>
+            </a>
+            <a href="https://t.me/saidovUmidbek" class="btn-container telegram-support-btn">
+                <Icon class="fluid_icon" icon="uit:telegram-alt" width="26" color="#ffffff" /> <span>Telegram</span>
+            </a>
+           </div>
 
-            <div class="btn-box">
-                <div class="login_btn" @click="controlLoading">
-                    <span>Kirish</span>
-                    <Icon class="fluid_icon" :icon="loading ? 'svg-spinners:bars-rotate-fade' : 'mdi:chevron-right'"
-                        width="26" color="#ffffff" />
-                </div>
-                <div class="register_btn" >
-                    <span @click="goPush('register')"> Ro'yxatdan o'tish</span>
-                </div>
+         
+
+            <div class="support_box">
+                <Icon class="fluid_icon" icon="bx:support" width="30" color="#ffffff" /> <span>Qo'llab quvatlash xizmati</span>
             </div>
 
 
@@ -55,13 +51,13 @@ const route = useRoute()
 const loading = ref(false);
 
 
-
 function controlLoading() {
     loading.value = true;
     setTimeout(() => {
         loading.value = false;
     }, 3000)
 }
+
 
 function goPush(link){
     router.push({name:link})
@@ -88,99 +84,69 @@ function goPush(link){
         backdrop-filter: blur(10px);
         padding: 350px 100px 0px 100px;
 
-        &>.login_title {
-            width: 100%;
-            display: inline-block;
-            font-size: 30px;
+        .support_title{
+            display: block;
             color: #ffffff;
+            font-size: 30px;
+            text-align: center;
         }
-
-        .phone_number {
-            margin-top: 30px;
+        .support_subtitle{
+            display: block;
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
         }
-
-        .input_box {
+         .support-btn-box{
             display: flex;
-            align-items: center;
-            position: relative;
+            justify-content: center;
+            gap: 20px;
             width: 100%;
-            height: 40px;
+             margin-top: 50px;
 
-
-            .fluid_icon {
-                width: 26px;
-                font-weight: 500 !important;
-                position: absolute;
-                right: 0px;
-                top: 10px;
-
-
-            }
-
-            .fluid_input {
+             .btn-container{
                 display: inline-block;
-                width: 100% !important;
-                height: 100% !important;
-                background-color: transparent;
-                border: none;
-                font-size: 20px;
-                color: #F9A226;
-                border-bottom: 1px solid #F2F2F2;
-
-            }
-
-            .fluid_input:focus {
-                outline: none;
-                border-bottom: 1px solid #F9A226;
-            }
-
-            .fluid_input::placeholder {
-                color: #ffffff;
-                font-size: 14px;
-                font-weight: 500;
-                font-family: 'Montserrat', sans-serif !important;
-            }
-        }
-
-        .btn-box {
-            margin-top: 30px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-
-            .login_btn {
-                width: 140px;
-                height: 40px;
-                background-color: #F9A226;
-                color: #ffffff;
                 padding: 10px 30px;
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                text-decoration: none;
                 cursor: pointer;
                 transition: all 0.3s ease-out;
 
+              
+             }
+             .phone-support-btn{
+                background-color: #F9A226;
+                color: #ffffff;
                 &:active {
                     transform: scale(0.98);
                     background-color: #a76406e3;
                 }
-            }
-
-            .register_btn {
-                width: calc(100% - 140px);
-                height: 40px;
+             }
+             .telegram-support-btn{
+                background-color: #4994c9;
                 color: #ffffff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.2s ease;
-
-                span:hover {
-                    cursor: pointer;
-                    color: #F9A226;
+                &:active {
+                    transform: scale(0.98);
+                    background-color: #5d9cc9;
                 }
+                
+             }
+        }
+       
+        .support_box{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            margin-top: 200px;
+            span{
+                font-size: 14px;
+                 color: #ffffff;
             }
         }
+       
 
     }
 
@@ -194,14 +160,14 @@ function goPush(link){
             font-size: 38px;
             font-weight: 500;
             opacity: 0;
-            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
 
         .subtitle {
             font-size: 20px;
             font-weight: 500;
             opacity: 0;
-            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
     }
 
@@ -210,7 +176,7 @@ function goPush(link){
         object-fit: contain;
         position: absolute;
         opacity: 0;
-        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
 
     }
 
@@ -227,9 +193,7 @@ function goPush(link){
             width: 790px;
             padding: 350px 100px 0px 100px;
 
-            &>.login_title {
-                margin-bottom: 50px;
-            }
+            
         }
 
     }
@@ -249,9 +213,7 @@ function goPush(link){
             width: 40%;
             padding: 250px 60px 0px 60px;
 
-            &>.login_title {
-                margin-bottom: 50px;
-            }
+            
 
 
 
@@ -287,9 +249,7 @@ function goPush(link){
             width: 40%;
             padding: 200px 30px 0px 30px;
 
-            &>.login_title {
-                margin-bottom: 50px;
-            }
+            
         }
     }
 
@@ -407,26 +367,20 @@ function goPush(link){
                 margin-bottom: 30px !important;
             }
 
-            .btn-box {
+            .auth-btn-box {
                 margin-top: 30px;
                 width: 100%;
                 display: flex;
                 align-items: center;
-
-
-
-
-
-
                 .login_btn {
-                    width: 140px;
+                    width: 200px;
                     height: 40px;
                     
                     padding: 10px 20px !important;
                 }
 
                 .register_btn {
-                    width: calc(100% - 120px);
+                    width: calc(100% - 200px);
 
 
 

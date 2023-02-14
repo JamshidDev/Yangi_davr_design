@@ -4,7 +4,7 @@
 
         <div class="form_conatiner">
 
-            <span class="login_title">Tizimga kirish</span>
+            <span class="login_title">Ro'yxatdan o'tish</span>
 
             <div class="input_box">
                 <input class="fluid_input" type="text" placeholder="Login">
@@ -16,15 +16,24 @@
                 <Icon class="fluid_icon" icon="ic:baseline-call" width="30" color="#ffffff" />
             </div>
 
-            <div class="btn-box">
+            <div class="input_box phone_number">
+                <input class="fluid_input" type="text" placeholder="Promo code">
+                <Icon class="fluid_icon" icon="ic:baseline-lock" width="30" color="#ffffff" />
+            </div>
+
+            <div class="auth-btn-box">
                 <div class="login_btn" @click="controlLoading">
-                    <span>Kirish</span>
+                    <span>Ro'yxatdan o'tish</span>
                     <Icon class="fluid_icon" :icon="loading ? 'svg-spinners:bars-rotate-fade' : 'mdi:chevron-right'"
                         width="26" color="#ffffff" />
                 </div>
-                <div class="register_btn" >
-                    <span @click="goPush('register')"> Ro'yxatdan o'tish</span>
+                <div class="register_btn">
+                    <span @click="goPush('login')"> Tizimga kirish</span>
                 </div>
+            </div>
+
+            <div class="support_box">
+                <Icon @click="goPush('support')" class="fluid_icon" icon="bx:support" width="30"  /> <span @click="goPush('support')">Qo'llab quvatlash xizmati</span>
             </div>
 
 
@@ -55,13 +64,13 @@ const route = useRoute()
 const loading = ref(false);
 
 
-
 function controlLoading() {
     loading.value = true;
     setTimeout(() => {
         loading.value = false;
     }, 3000)
 }
+
 
 function goPush(link){
     router.push({name:link})
@@ -142,18 +151,18 @@ function goPush(link){
             }
         }
 
-        .btn-box {
+        .auth-btn-box {
             margin-top: 30px;
             width: 100%;
             display: flex;
             align-items: center;
 
             .login_btn {
-                width: 140px;
+                width: 230px;
                 height: 40px;
                 background-color: #F9A226;
                 color: #ffffff;
-                padding: 10px 30px;
+                padding: 10px 20px;
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -167,7 +176,7 @@ function goPush(link){
             }
 
             .register_btn {
-                width: calc(100% - 140px);
+                width: calc(100% - 230px);
                 height: 40px;
                 color: #ffffff;
                 display: flex;
@@ -177,6 +186,30 @@ function goPush(link){
 
                 span:hover {
                     cursor: pointer;
+                    color: #F9A226;
+                }
+            }
+        }
+        .support_box{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            margin-top: 100px;
+            .fluid_icon{
+                color: #ffffff !important;
+                cursor: pointer;
+                 transition: all 0.3s ease-out;
+                &:hover {
+                    color: #F9A226 !important;
+                }
+            }
+            span{
+                font-size: 14px;
+                 color: #ffffff;
+                 cursor: pointer;
+                 transition: all 0.3s ease-out;
+                 &:hover {
                     color: #F9A226;
                 }
             }
@@ -194,14 +227,14 @@ function goPush(link){
             font-size: 38px;
             font-weight: 500;
             opacity: 0;
-            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
 
         .subtitle {
             font-size: 20px;
             font-weight: 500;
             opacity: 0;
-            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
     }
 
@@ -210,7 +243,7 @@ function goPush(link){
         object-fit: contain;
         position: absolute;
         opacity: 0;
-        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
 
     }
 
@@ -289,6 +322,25 @@ function goPush(link){
 
             &>.login_title {
                 margin-bottom: 50px;
+            }
+            .auth-btn-box {
+                margin-top: 30px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .login_btn {
+                    width: 200px;
+                    height: 40px;
+                    
+                    padding: 10px 20px !important;
+                }
+
+                .register_btn {
+                    width: calc(100% - 200px);
+
+
+
+                }
             }
         }
     }
@@ -407,26 +459,20 @@ function goPush(link){
                 margin-bottom: 30px !important;
             }
 
-            .btn-box {
+            .auth-btn-box {
                 margin-top: 30px;
                 width: 100%;
                 display: flex;
                 align-items: center;
-
-
-
-
-
-
                 .login_btn {
-                    width: 140px;
-                    height: 40px;
+                    width: 200px;
+                    height: 50px;
                     
                     padding: 10px 20px !important;
                 }
 
                 .register_btn {
-                    width: calc(100% - 120px);
+                    width: calc(100% - 200px);
 
 
 

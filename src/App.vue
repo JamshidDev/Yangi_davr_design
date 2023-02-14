@@ -1,14 +1,14 @@
 <script setup>
 import LoadingComponent from './views/Loading/LoadingComponent.vue';
 import {onMounted, ref } from 'vue'
-const loading = ref(false);
+const loading = ref(true);
 
 
 
   
-// window.addEventListener("load", function(event) {
-//     loading.value = false;
-//   })
+window.addEventListener("load", function(event) {
+    loading.value = false;
+  })
 </script>
 
 <template>
