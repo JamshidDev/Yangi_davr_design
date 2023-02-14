@@ -8,19 +8,20 @@
             <span class="support_subtitle">Platforma bo'yicha savol, taklif, muammolar yuzasidan:</span>
 
 
-           <div class="support-btn-box">
-            <a href="tel:+998907884547" class="btn-container phone-support-btn">
-                <Icon class="fluid_icon" icon="ic:baseline-call" width="26" color="#ffffff" /> <span>Telefon</span>
-            </a>
-            <a href="https://t.me/saidovUmidbek" class="btn-container telegram-support-btn">
-                <Icon class="fluid_icon" icon="uit:telegram-alt" width="26" color="#ffffff" /> <span>Telegram</span>
-            </a>
-           </div>
+            <div class="support-btn-box">
+                <a href="tel:+998907884547" class="btn-container phone-support-btn">
+                    <Icon class="fluid_icon" icon="ic:baseline-call" width="26" color="#ffffff" /> <span>Telefon</span>
+                </a>
+                <a href="https://t.me/saidovUmidbek" class="btn-container telegram-support-btn">
+                    <Icon class="fluid_icon" icon="uit:telegram-alt" width="26" color="#ffffff" /> <span>Telegram</span>
+                </a>
+            </div>
 
-         
+
 
             <div class="support_box">
-                <Icon class="fluid_icon" icon="bx:support" width="30" color="#ffffff" /> <span>Qo'llab quvatlash xizmati</span>
+                <Icon class="fluid_icon" icon="bx:support" width="30" color="#ffffff" /> <span>Qo'llab quvatlash
+                    xizmati</span>
             </div>
 
 
@@ -59,8 +60,8 @@ function controlLoading() {
 }
 
 
-function goPush(link){
-    router.push({name:link})
+function goPush(link) {
+    router.push({ name: link })
 }
 
 </script>
@@ -82,29 +83,31 @@ function goPush(link){
         right: 0px;
         background-color: #000000cf;
         backdrop-filter: blur(10px);
-        padding: 350px 100px 0px 100px;
+        padding: 250px 100px 0px 100px;
 
-        .support_title{
+        .support_title {
             display: block;
             color: #ffffff;
             font-size: 30px;
             text-align: center;
         }
-        .support_subtitle{
+
+        .support_subtitle {
             display: block;
             color: #ffffff;
             font-size: 20px;
             text-align: center;
             margin-top: 50px;
         }
-         .support-btn-box{
+
+        .support-btn-box {
             display: flex;
             justify-content: center;
             gap: 20px;
             width: 100%;
-             margin-top: 50px;
+            margin-top: 50px;
 
-             .btn-container{
+            .btn-container {
                 display: inline-block;
                 padding: 10px 30px;
                 display: flex;
@@ -114,39 +117,44 @@ function goPush(link){
                 cursor: pointer;
                 transition: all 0.3s ease-out;
 
-              
-             }
-             .phone-support-btn{
+
+            }
+
+            .phone-support-btn {
                 background-color: #F9A226;
                 color: #ffffff;
+
                 &:active {
                     transform: scale(0.98);
                     background-color: #a76406e3;
                 }
-             }
-             .telegram-support-btn{
+            }
+
+            .telegram-support-btn {
                 background-color: #4994c9;
                 color: #ffffff;
+
                 &:active {
                     transform: scale(0.98);
                     background-color: #5d9cc9;
                 }
-                
-             }
+
+            }
         }
-       
-        .support_box{
+
+        .support_box {
             display: flex;
             align-items: center;
             width: 100%;
             gap: 20px;
-            margin-top: 200px;
-            span{
+            margin-top: 50px;
+
+            span {
                 font-size: 14px;
-                 color: #ffffff;
+                color: #ffffff;
             }
         }
-       
+
 
     }
 
@@ -193,7 +201,7 @@ function goPush(link){
             width: 790px;
             padding: 350px 100px 0px 100px;
 
-            
+
         }
 
     }
@@ -213,7 +221,7 @@ function goPush(link){
             width: 40%;
             padding: 250px 60px 0px 60px;
 
-            
+
 
 
 
@@ -249,7 +257,7 @@ function goPush(link){
             width: 40%;
             padding: 200px 30px 0px 30px;
 
-            
+
         }
     }
 
@@ -260,7 +268,7 @@ function goPush(link){
 
         .title {
             font-size: 30px !important;
-           
+
         }
 
         .subtitle {
@@ -372,10 +380,11 @@ function goPush(link){
                 width: 100%;
                 display: flex;
                 align-items: center;
+
                 .login_btn {
                     width: 200px;
                     height: 40px;
-                    
+
                     padding: 10px 20px !important;
                 }
 
@@ -395,7 +404,7 @@ function goPush(link){
         left: 40px !important;
         z-index: 10;
 
-       .title {
+        .title {
             font-size: 20px !important;
             color: #ffffff !important;
         }
@@ -422,32 +431,37 @@ function goPush(link){
 // 1920x1080
 
 
-@keyframes brand-title{
-    0%{
+@keyframes brand-title {
+    0% {
         opacity: 0;
         transform: translateX(200px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
-@keyframes brand-subtitle{
-    0%{
+
+@keyframes brand-subtitle {
+    0% {
         opacity: 0;
         transform: translateX(-200px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
-@keyframes logo-picture{
-    0%{
+
+@keyframes logo-picture {
+    0% {
         opacity: 0;
         transform: scale(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale(1);
     }

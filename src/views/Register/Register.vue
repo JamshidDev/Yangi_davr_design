@@ -195,7 +195,7 @@ function goPush(link){
             align-items: center;
             width: 100%;
             gap: 20px;
-            margin-top: 100px;
+            margin-top: 50px;
             .fluid_icon{
                 color: #ffffff !important;
                 cursor: pointer;
