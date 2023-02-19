@@ -1,6 +1,6 @@
 <template>
     <div class="login_page">
-        <img class="login_logo_picture" src="@/assets/images/login_logo.png" alt="Login logo">
+        <img class="support_logo_picture" src="@/assets/images/login_logo.png" alt="Login logo">
 
         <div class="form_conatiner">
 
@@ -19,15 +19,18 @@
 
 
 
+            <!-- <div class="support_box">
+                    <Icon class="fluid_icon" icon="mdi:arrow-left-circle-outline" width="24" color="#ffffff" /> <span>Orqaga qaytish</span>
+                </div> -->
             <div class="support_box">
-                <Icon class="fluid_icon" icon="bx:support" width="30" color="#ffffff" /> <span>Qo'llab quvatlash
-                    xizmati</span>
+                <Icon @click="goPush('login')" class="fluid_icon" icon="mdi:arrow-left-circle-outline" width="24" /> <span
+                    @click="goPush('login')">Kirish sahifasiga qaytish</span>
             </div>
 
 
         </div>
 
-        <div class="logo_box">
+        <div class="support_logo_box">
             <Transition name="title">
                 <div class="title">
                     Yangi davr raqamli ta'lim
@@ -158,7 +161,7 @@ function goPush(link) {
 
     }
 
-    .logo_box {
+    .support_logo_box {
         position: absolute;
         bottom: 50px;
         left: 99px;
@@ -167,26 +170,56 @@ function goPush(link) {
         .title {
             font-size: 38px;
             font-weight: 500;
-            opacity: 0;
-            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+            // opacity: 0;
+            // animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
 
         .subtitle {
             font-size: 20px;
             font-weight: 500;
-            opacity: 0;
-            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+            // opacity: 0;
+            // animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
     }
 
-    .login_logo_picture {
+    .support_logo_picture {
         width: 70px;
         object-fit: contain;
         position: absolute;
-        opacity: 0;
-        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+        // opacity: 0;
+        // animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
 
     }
+
+    .support_box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        margin-top: 50px;
+
+        .fluid_icon {
+            color: #ffffff !important;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                color: #F9A226 !important;
+            }
+        }
+
+        span {
+            font-size: 14px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                color: #F9A226;
+            }
+        }
+    }
+
 
 
 
@@ -228,7 +261,7 @@ function goPush(link) {
         }
     }
 
-    .logo_box {
+    .support_logo_box {
         position: absolute;
         bottom: 30px !important;
         left: 99px;
@@ -244,7 +277,7 @@ function goPush(link) {
         }
     }
 
-    .login_logo_picture {
+    .support_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -261,7 +294,7 @@ function goPush(link) {
         }
     }
 
-    .logo_box {
+    .support_logo_box {
         position: absolute;
         bottom: 30px !important;
         left: 99px;
@@ -276,7 +309,7 @@ function goPush(link) {
         }
     }
 
-    .login_logo_picture {
+    .support_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -296,7 +329,7 @@ function goPush(link) {
         }
     }
 
-    .logo_box {
+    .support_logo_box {
         bottom: 30px !important;
         left: 99px;
         z-index: 10;
@@ -314,7 +347,7 @@ function goPush(link) {
         }
     }
 
-    .login_logo_picture {
+    .support_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -335,7 +368,7 @@ function goPush(link) {
         }
     }
 
-    .logo_box {
+    .support_logo_box {
         position: absolute;
         bottom: 40px !important;
         left: 40px !important;
@@ -354,7 +387,7 @@ function goPush(link) {
         }
     }
 
-    .login_logo_picture {
+    .support_logo_picture {
         width: 50px !important;
         top: 30px !important;
         left: 40px !important;
@@ -399,7 +432,7 @@ function goPush(link) {
         }
     }
 
-    .logo_box {
+    .support_logo_box {
         bottom: 40px !important;
         left: 40px !important;
         z-index: 10;
@@ -416,7 +449,7 @@ function goPush(link) {
         }
     }
 
-    .login_logo_picture {
+    .support_logo_picture {
         width: 60px !important;
         top: 30px !important;
         left: 20px !important;
@@ -465,5 +498,4 @@ function goPush(link) {
         opacity: 1;
         transform: scale(1);
     }
-}
-</style>
+}</style>

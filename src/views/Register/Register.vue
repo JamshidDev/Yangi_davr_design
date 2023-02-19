@@ -1,6 +1,6 @@
 <template>
     <div class="login_page">
-        <img class="login_logo_picture" src="@/assets/images/login_logo.png" alt="Login logo">
+        <img class="auth_logo_picture" src="@/assets/images/login_logo.png" alt="Login logo">
 
         <div class="form_conatiner">
 
@@ -39,7 +39,7 @@
 
         </div>
 
-        <div class="logo_box">
+        <div class="logo_box_auth">
             <Transition name="title">
                 <div class="title">
                     Yangi davr raqamli ta'lim
@@ -217,7 +217,7 @@ function goPush(link){
 
     }
 
-    .logo_box {
+    .logo_box_auth {
         position: absolute;
         bottom: 50px;
         left: 99px;
@@ -226,24 +226,24 @@ function goPush(link){
         .title {
             font-size: 38px;
             font-weight: 500;
-            opacity: 0;
-            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+            // opacity: 0;
+            // animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
 
         .subtitle {
             font-size: 20px;
             font-weight: 500;
-            opacity: 0;
-            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+            // opacity: 0;
+            // animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 70px;
         object-fit: contain;
         position: absolute;
-        opacity: 0;
-        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+        // opacity: 0;
+        // animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
 
     }
 
@@ -267,7 +267,7 @@ function goPush(link){
 
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -291,7 +291,7 @@ function goPush(link){
         }
     }
 
-    .logo_box {
+    .logo_box_auth{
         position: absolute;
         bottom: 30px !important;
         left: 99px;
@@ -307,7 +307,7 @@ function goPush(link){
         }
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -345,7 +345,7 @@ function goPush(link){
         }
     }
 
-    .logo_box {
+    .logo_box_auth {
         position: absolute;
         bottom: 30px !important;
         left: 99px;
@@ -360,7 +360,7 @@ function goPush(link){
         }
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -380,7 +380,7 @@ function goPush(link){
         }
     }
 
-    .logo_box {
+    .logo_box_auth {
         bottom: 30px !important;
         left: 99px;
         z-index: 10;
@@ -398,7 +398,7 @@ function goPush(link){
         }
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 60px !important;
         top: 89px;
         left: 99px;
@@ -411,7 +411,7 @@ function goPush(link){
     .login_page {
         .form_conatiner {
             width: 100%;
-            padding: 100px 20% 0px 20%;
+            padding: 100px 10% 0px 10%;
 
             &>.login_title {
                 margin-bottom: 50px;
@@ -419,7 +419,7 @@ function goPush(link){
         }
     }
 
-    .logo_box {
+    .logo_box_auth {
         position: absolute;
         bottom: 40px !important;
         left: 40px !important;
@@ -438,7 +438,7 @@ function goPush(link){
         }
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 50px !important;
         top: 30px !important;
         left: 40px !important;
@@ -482,7 +482,7 @@ function goPush(link){
         }
     }
 
-    .logo_box {
+    .logo_box_auth {
         bottom: 40px !important;
         left: 40px !important;
         z-index: 10;
@@ -499,7 +499,7 @@ function goPush(link){
         }
     }
 
-    .login_logo_picture {
+    .auth_logo_picture {
         width: 60px !important;
         top: 30px !important;
         left: 20px !important;
@@ -514,34 +514,34 @@ function goPush(link){
 // 1920x1080
 
 
-@keyframes brand-title{
-    0%{
-        opacity: 0;
-        transform: translateX(200px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-@keyframes brand-subtitle{
-    0%{
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-@keyframes logo-picture{
-    0%{
-        opacity: 0;
-        transform: scale(0);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+// @keyframes brand-title{
+//     0%{
+//         opacity: 0;
+//         transform: translateX(200px);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
+// @keyframes brand-subtitle{
+//     0%{
+//         opacity: 0;
+//         transform: translateX(-200px);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
+// @keyframes logo-picture{
+//     0%{
+//         opacity: 0;
+//         transform: scale(0);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: scale(1);
+//     }
+// }
 </style>

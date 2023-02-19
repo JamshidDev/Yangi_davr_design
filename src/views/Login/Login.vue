@@ -12,9 +12,29 @@
             </div>
 
             <div class="input_box phone_number">
+                <Dropdown v-model="country_code" :options="contryList" optionLabel="name" :filter="true"
+                    placeholder="Select a Country" :showClear="true">
+                    <template #value="slotProps">
+                        <div class="country-item country-item-value" v-if="slotProps.value">
+                            <img src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" />
+                            <div>{{ slotProps.value.name }}</div>
+                        </div>
+                        <span v-else>
+                            {{ slotProps.placeholder }}
+                        </span>
+                    </template>
+                    <template #option="slotProps">
+                        <div class="country-item">
+                            <img src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" />
+                            <div>{{ slotProps.option.name }}</div>
+                        </div>
+                    </template>
+                </Dropdown>
+
                 <input class="fluid_input" type="text" placeholder="Telefon raqam">
                 <Icon class="fluid_icon" icon="ic:baseline-call" width="30" color="#ffffff" />
             </div>
+            
 
             <div class="btn-box">
                 <div class="login_btn" @click="controlLoading">
@@ -22,10 +42,14 @@
                     <Icon class="fluid_icon" :icon="loading ? 'svg-spinners:bars-rotate-fade' : 'mdi:chevron-right'"
                         width="26" color="#ffffff" />
                 </div>
-                <div class="register_btn" >
+                <div class="register_btn">
                     <span @click="goPush('register')"> Ro'yxatdan o'tish</span>
                 </div>
             </div>
+            <div class="support_box">
+                <Icon @click="goPush('support')" class="fluid_icon" icon="bx:support" width="30"  /> <span @click="goPush('support')">Qo'llab quvatlash xizmati</span>
+            </div>
+
 
 
         </div>
@@ -48,11 +72,16 @@
 <script setup>
 import { ref } from 'vue'
 import { Icon } from "@iconify/vue"
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router';
+import contryList from '../../utils/country_en.js'
+import MazPhoneNumberInput from 'maz-ui/components/MazPhoneNumberInput'
+const phoneNumber = ref()
+const country_code = ref()
 
 const router = useRouter()
 const route = useRoute()
 const loading = ref(false);
+console.log(contryList);
 
 
 
@@ -63,8 +92,8 @@ function controlLoading() {
     }, 3000)
 }
 
-function goPush(link){
-    router.push({name:link})
+function goPush(link) {
+    router.push({ name: link })
 }
 
 </script>
@@ -181,6 +210,32 @@ function goPush(link){
                 }
             }
         }
+        .support_box{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            margin-top: 50px;
+            .fluid_icon{
+                color: #ffffff !important;
+                cursor: pointer;
+                 transition: all 0.3s ease-out;
+                &:hover {
+                    color: #F9A226 !important;
+                }
+            }
+            span{
+                font-size: 14px;
+                 color: #ffffff;
+                 cursor: pointer;
+                 transition: all 0.3s ease-out;
+                 &:hover {
+                    color: #F9A226;
+                }
+            }
+        }
+
+        
 
     }
 
@@ -194,14 +249,14 @@ function goPush(link){
             font-size: 38px;
             font-weight: 500;
             opacity: 0;
-            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
 
         .subtitle {
             font-size: 20px;
             font-weight: 500;
             opacity: 0;
-            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
     }
 
@@ -210,7 +265,7 @@ function goPush(link){
         object-fit: contain;
         position: absolute;
         opacity: 0;
-        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 1s forwards;
+        animation: logo-picture 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
 
     }
 
@@ -300,7 +355,7 @@ function goPush(link){
 
         .title {
             font-size: 30px !important;
-           
+
         }
 
         .subtitle {
@@ -421,7 +476,7 @@ function goPush(link){
                 .login_btn {
                     width: 140px;
                     height: 40px;
-                    
+
                     padding: 10px 20px !important;
                 }
 
@@ -441,7 +496,7 @@ function goPush(link){
         left: 40px !important;
         z-index: 10;
 
-       .title {
+        .title {
             font-size: 20px !important;
             color: #ffffff !important;
         }
@@ -468,32 +523,37 @@ function goPush(link){
 // 1920x1080
 
 
-@keyframes brand-title{
-    0%{
+@keyframes brand-title {
+    0% {
         opacity: 0;
         transform: translateX(200px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
-@keyframes brand-subtitle{
-    0%{
+
+@keyframes brand-subtitle {
+    0% {
         opacity: 0;
         transform: translateX(-200px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
-@keyframes logo-picture{
-    0%{
+
+@keyframes logo-picture {
+    0% {
         opacity: 0;
         transform: scale(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale(1);
     }
