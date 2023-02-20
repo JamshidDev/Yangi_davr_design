@@ -34,7 +34,7 @@
                 <input class="fluid_input" type="text" placeholder="Telefon raqam">
                 <Icon class="fluid_icon" icon="ic:baseline-call" width="30" color="#ffffff" />
             </div>
-            
+
 
             <div class="btn-box">
                 <div class="login_btn" @click="controlLoading">
@@ -47,7 +47,19 @@
                 </div>
             </div>
             <div class="support_box">
-                <Icon @click="goPush('support')" class="fluid_icon" icon="bx:support" width="30"  /> <span @click="goPush('support')">Qo'llab quvatlash xizmati</span>
+                <Icon @click="goPush('support')" class="fluid_icon" icon="bx:support" width="30" /> <span
+                    @click="goPush('support')">Qo'llab quvatlash xizmati</span>
+            </div>
+            <div class="bottom-logo_box">
+                <Transition name="title">
+                    <div class="title">
+                        Yangi davr raqamli ta'lim
+                    </div>
+                </Transition>
+
+                <div class="subtitle">
+                    platformasiga xush kelibsiz!
+                </div>
             </div>
 
 
@@ -210,32 +222,56 @@ function goPush(link) {
                 }
             }
         }
-        .support_box{
+
+        .support_box {
             display: flex;
             align-items: center;
             width: 100%;
             gap: 20px;
             margin-top: 50px;
-            .fluid_icon{
+
+            .fluid_icon {
                 color: #ffffff !important;
                 cursor: pointer;
-                 transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+
                 &:hover {
                     color: #F9A226 !important;
                 }
             }
-            span{
+
+            span {
                 font-size: 14px;
-                 color: #ffffff;
-                 cursor: pointer;
-                 transition: all 0.3s ease-out;
-                 &:hover {
+                color: #ffffff;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+
+                &:hover {
                     color: #F9A226;
                 }
             }
         }
 
-        
+        .bottom-logo_box {
+            width: 100%;
+            margin-top: 120px;
+
+            .title {
+            font-size: 20px !important;
+            font-weight: 500;
+            color: #ffffff !important;
+            animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+        }
+
+        .subtitle {
+            font-size: 14px !important;
+            font-weight: 500;
+            color: #ffffff !important;
+            animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+        }
+        }
+
+
 
     }
 
@@ -285,7 +321,11 @@ function goPush(link) {
             &>.login_title {
                 margin-bottom: 50px;
             }
+            .bottom-logo_box{
+                display: none !important;
+            }
         }
+        
 
     }
 
@@ -307,6 +347,10 @@ function goPush(link) {
             &>.login_title {
                 margin-bottom: 50px;
             }
+            .bottom-logo_box{
+                display: none !important;
+            }
+            
 
 
 
@@ -344,6 +388,9 @@ function goPush(link) {
 
             &>.login_title {
                 margin-bottom: 50px;
+            }
+            .bottom-logo_box{
+                display: none !important;
             }
         }
     }
@@ -387,6 +434,7 @@ function goPush(link) {
         bottom: 30px !important;
         left: 99px;
         z-index: 10;
+        display: none !important;
 
         .title {
             font-size: 20px !important;
@@ -427,6 +475,7 @@ function goPush(link) {
         bottom: 40px !important;
         left: 40px !important;
         z-index: 10;
+        display: none !important;
 
         .title {
             font-size: 20px !important;
@@ -495,6 +544,7 @@ function goPush(link) {
         bottom: 40px !important;
         left: 40px !important;
         z-index: 10;
+        display: none !important;
 
         .title {
             font-size: 20px !important;
@@ -557,5 +607,4 @@ function goPush(link) {
         opacity: 1;
         transform: scale(1);
     }
-}
-</style>
+}</style>
