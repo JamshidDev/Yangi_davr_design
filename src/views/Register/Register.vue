@@ -234,14 +234,12 @@ function goPush(link){
                 font-size: 20px !important;
                 font-weight: 500;
                 color: #ffffff !important;
-                animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
             }
 
             .subtitle {
                 font-size: 14px !important;
                 font-weight: 500;
                 color: #ffffff !important;
-                animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
             }
         }
 
