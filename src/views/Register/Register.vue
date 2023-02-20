@@ -35,6 +35,17 @@
             <div class="support_box">
                 <Icon @click="goPush('support')" class="fluid_icon" icon="bx:support" width="30"  /> <span @click="goPush('support')">Qo'llab quvatlash xizmati</span>
             </div>
+            <div class="auth-bottom-logo_box">
+                <Transition name="title">
+                    <div class="title">
+                        Yangi davr raqamli ta'lim
+                    </div>
+                </Transition>
+
+                <div class="subtitle">
+                    platformasiga xush kelibsiz!
+                </div>
+            </div>
 
 
         </div>
@@ -214,6 +225,25 @@ function goPush(link){
                 }
             }
         }
+        .auth-bottom-logo_box {
+            width: 100%;
+            margin-top: 100px;
+            overflow: hidden;
+
+            .title {
+                font-size: 20px !important;
+                font-weight: 500;
+                color: #ffffff !important;
+                animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+            }
+
+            .subtitle {
+                font-size: 14px !important;
+                font-weight: 500;
+                color: #ffffff !important;
+                animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
+            }
+        }
 
     }
 
@@ -263,6 +293,9 @@ function goPush(link){
             &>.login_title {
                 margin-bottom: 50px;
             }
+            .auth-bottom-logo_box {
+                display: none !important;
+            }
         }
 
     }
@@ -284,6 +317,9 @@ function goPush(link){
 
             &>.login_title {
                 margin-bottom: 50px;
+            }
+            .auth-bottom-logo_box {
+                display: none !important;
             }
 
 
@@ -381,6 +417,7 @@ function goPush(link){
     }
 
     .logo_box_auth {
+        display: none !important;
         bottom: 30px !important;
         left: 99px;
         z-index: 10;
@@ -416,7 +453,12 @@ function goPush(link){
             &>.login_title {
                 margin-bottom: 50px;
             }
+           
+            
         }
+        .logo_box_auth{
+                display: none !important;
+            }
     }
 
     .logo_box_auth {
@@ -485,6 +527,7 @@ function goPush(link){
     .logo_box_auth {
         bottom: 40px !important;
         left: 40px !important;
+        display: none !important;
         z-index: 10;
 
        .title {

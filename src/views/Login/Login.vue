@@ -255,11 +255,13 @@ function goPush(link) {
         .bottom-logo_box {
             width: 100%;
             margin-top: 120px;
+            overflow: hidden;
 
             .title {
             font-size: 20px !important;
             font-weight: 500;
             color: #ffffff !important;
+            opacity: 0;
             animation: brand-title 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
 
@@ -267,6 +269,7 @@ function goPush(link) {
             font-size: 14px !important;
             font-weight: 500;
             color: #ffffff !important;
+            opacity: 0;
             animation: brand-subtitle 1s cubic-bezier(1, 0.5, 0.8, 1) 0.5s forwards;
         }
         }
